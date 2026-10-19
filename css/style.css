@@ -1,0 +1,754 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 20px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav > a.active,
+.dropdown > a.active {
+    color:#b30000;
+    border-bottom: 2px solid #b30000;
+    padding-bottom: 5px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav a:hover {
+    color: #b30000;
+}
+
+.hero {
+    background-image:
+         linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+         url("../images/hero.png");
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 120px 40px;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.hero-button {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    padding: 12px 24px;
+    font-weight: bold;
+}
+
+.categories {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 60px 40px;
+    background-color: #f4f4f4;
+}
+
+.category-card {
+    flex: 1;
+    background-color: white;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.category-card h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.category-card p {
+    margin-bottom: 20px;
+}
+
+.category-card a {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.category-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.trainer-section {
+    background-color: #111;
+    color: white;
+    padding: 50px 40px;
+}
+
+.trainer-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.trainer-section p {
+    margin-bottom: 20px;
+}
+
+
+.trainer-section a {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    padding: 12px 24px;
+    font-weight: bold;
+}
+
+.gym-section {
+    background-color: #222;
+    color: white;
+    padding: 50px 40px;
+
+}
+
+.gym-section h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.gym-section p {
+    margin-bottom: 20px;
+}
+
+.gym-section a {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    padding: 12px 24px;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+footer h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: #b30000;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+.hero-button:hover,
+.category-card a:hover,
+.trainer-section a:hover,
+.gym-section a:hover {
+    background-color: gray;
+    color: white;
+}
+
+.hero-button,
+.category-card a,
+.trainer-section a,
+.gym-section a {
+    transition: 0.3s;
+}
+
+.category-card {
+    transition: 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.shop-section {
+    padding: 40px;
+}
+
+.products {
+    display: flex;
+    gap: 20px;
+}
+
+.product-card {
+    flex: 1;
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.shop-section {
+    padding: 50px 40px;
+}
+
+.shop-section h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.shop-hero {
+    background: linear-gradient(135deg, #111, #2b2b2b);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.shop-hero h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.shop-hero p {
+    font-size: 18px;
+}
+
+.product-card a {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    margin-top: 10px;
+}
+
+.product-card a:hover {
+    background-color: gray;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.colour-options {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 10px 0;
+}
+
+.colour {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid #999;
+}
+
+.black {
+    background-color: black;
+}
+
+.grey {
+    background-color: grey;
+}
+
+.white {
+    background-color: white;
+}
+
+.navy {
+    background-color: navy;
+}
+
+.burgundy {
+    background-color: #800020;
+}
+
+.product-card select {
+    padding: 7px 10px;
+    margin: 10px 5px;
+    border: 1px solid #ccc;
+}
+
+.courses-hero {
+    background: linear-gradient(135deg, #111, #2b2b2b);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.courses-hero h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.courses-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px;
+}
+
+.course-card {
+    background-color: #f4f4f4;
+    padding: 25px;
+    text-align: center;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.course-card h3 {
+    font-size: 22px;
+}
+
+.course-card a {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    margin-top: 10px;
+}
+
+.course-card a:hover {
+    background-color: gray;
+}
+
+.course-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+
+.trainers-hero {
+    background: linear-gradient(135deg, #111, #2b2b2b);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.trainers-hero h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.trainers-section,
+.gyms-section {
+    padding: 60px 40px;
+}
+
+.trainers-section h2,
+.gyms-section h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.trainer-cards,
+.gym-cards {
+    display: flex;
+    gap: 20px;
+}
+
+.trainer-card,
+.gym-card {
+    flex: 1;
+    background-color: #f4f4f4;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.trainer-card:hover,
+.gym-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.trainer-card h3,
+.gym-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.trainer-card p,
+.gym-card p {
+    margin-bottom: 15px;
+}
+
+.trainer-card a,
+.gym-card a {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    margin-top: 10px;
+}
+
+.trainer-card a:hover,
+.gym-card a:hover {
+    background-color: gray;
+}
+
+.trainer-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    background-color: #f5f5f5;
+    margin-bottom: 15px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #111;
+    min-width: 190px;
+    padding: 8px 0;
+    border-radius: 6px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown {
+    position: relative; 
+    display: inline-block;
+}
+
+.dropdown-menu a {
+    display: block;
+    color: white;
+    padding: 10px 16px;
+    margin: 0;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+    background-color: #222;
+    color:#b30000;
+}
+
+.gym-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+
+.contact-hero {
+    background: linear-gradient(135deg, #111, #2b2b2b);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.contact-hero h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.about-section,
+.contact-section {
+    padding: 60px 40px;
+}
+
+.about-section {
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+.about-section h2,
+.contact-section h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.about-section p {
+    margin-bottom: 18px;
+    line-height: 1.6;
+}
+
+.contact-section form {
+    max-width: 700px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.contact-section input,
+.contact-section textarea {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+}
+
+.contact-section button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: 0.3;
+}
+
+.contact-section button:hover {
+    background-color: gray;
+}
+
+.shop-section h2::after,
+.trainers-section h2::after,
+.gyms-section h2::after,
+.courses-section h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #b30000;
+    margin-top: 10px;
+}
+
+.hero-button,
+.category-card a,
+.product-card a,
+.course-card a,
+.trainer-card a,
+.gym-card a,
+.contact-section button {
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+}
+
+.hero-button:hover,
+.category-card a:hover,
+.product-card a:hover,
+.course-card a:hover,
+.trainer-card a:hover,
+.gym-card a:hover,
+.contact-section button:hover {
+    background-color: #333;
+}
+
+.product-card img,
+.course-card img,
+.trainer-card img,
+.gym-card img,
+.category-card img {
+    transition: transform 0.3s;
+}
+
+.product-card:hover img,
+.course-card:hover img,
+.trainer-card:hover img,
+.gym-card:hover img,
+.category-card:hover img {
+    transform: scale(1.03);
+}
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 15px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 8px;
+    }
+
+    .categories,
+    .products,
+    .trainer-cards,
+    .gym-cards,
+    .why-cards {
+        flex-direction: column;
+    }
+
+    .courses-section {
+        grid-template-columns: 1fr;
+    }
+
+    .shop-section,
+    .trainers-section,
+    .gyms-section,
+    .about-section,
+    .contact-section {
+        padding: 40px 20px;
+    }
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    text-decoration: none;
+}
+
+.social-links img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+}
+
+.social-links a:hover {
+    color: #b30000;
+}
+
+.shop-section:nth-of-type(even) {
+    background-color: #f5f5f5;
+}
+
+.why-apex {
+    padding: 60px 40px;
+    text-align: center;
+    background-color: #111;
+    color: white;
+}
+
+.why-apex h2 {
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+.why-apex h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #b30000;
+    margin: 10px auto 0;
+}
+
+.why-cards {
+    display: flex;
+    gap: 20px;
+}
+
+.why-card {
+    flex: 1;
+    padding: 30px;
+    background-color: #1c1c1c;
+    border-radius: 8px;
+    transition: 0.3
+}
+
+.why-card:hover {
+    transform: translateY(-5px);
+    background-color: #252525;
+}
+
+.why-card h3 {
+    margin-bottom: 15px;
+}
+
+.why-card p {
+    line-height: 1.6;
+}
+
+
+.badge {
+    display: inline-block;
+    background-color: #b30000;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
